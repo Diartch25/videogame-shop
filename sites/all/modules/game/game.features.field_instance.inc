@@ -34,7 +34,7 @@ function game_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Description',
+    'label' => 'Descripción',
     'required' => 1,
     'settings' => array(
       'display_summary' => 1,
@@ -82,7 +82,7 @@ function game_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_billboard',
-    'label' => 'Billboard',
+    'label' => 'Cover',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -145,13 +145,18 @@ function game_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_fivestar',
-    'label' => 'Fivestar',
-    'required' => FALSE,
+    'label' => 'Favoritos',
+    'required' => 0,
     'settings' => array(
+      'allow_clear' => 0,
+      'allow_ownvote' => 0,
+      'allow_revote' => 0,
       'stars' => 5,
+      'target' => 'none',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'fivestar',
       'settings' => array(
         'widget' => array(
@@ -187,20 +192,57 @@ function game_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_genre',
-    'label' => 'Genre',
+    'label' => 'Género',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-game-field_maker'.
+  $field_instances['node-game-field_maker'] = array(
+    'bundle' => 'game',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_maker',
+    'label' => 'Fabricante',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -233,7 +275,7 @@ function game_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_mini_billboards',
-    'label' => 'Mini billboards',
+    'label' => 'Imágenes',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -261,7 +303,11 @@ function game_field_default_field_instances() {
   // Exported field_instance: 'node-game-field_price'.
   $field_instances['node-game-field_price'] = array(
     'bundle' => 'game',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '0.00',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -292,8 +338,8 @@ function game_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_price',
-    'label' => 'Price',
-    'required' => FALSE,
+    'label' => 'Precio US $',
+    'required' => 0,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -302,6 +348,7 @@ function game_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
@@ -351,12 +398,13 @@ function game_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Billboard');
-  t('Description');
-  t('Fivestar');
-  t('Genre');
-  t('Mini billboards');
-  t('Price');
+  t('Cover');
+  t('Descripción');
+  t('Fabricante');
+  t('Favoritos');
+  t('Género');
+  t('Imágenes');
+  t('Precio US $');
   t('Tags');
 
   return $field_instances;

@@ -86,6 +86,9 @@ function game_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'blah' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -93,7 +96,7 @@ function game_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
       ),
       'display' => array(),
@@ -123,7 +126,6 @@ function game_strongarm() {
   $strongarm->name = 'node_options_game';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_game'] = $strongarm;
 
