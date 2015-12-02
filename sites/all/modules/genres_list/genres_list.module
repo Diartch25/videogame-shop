@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Genres List feature.
+ */
+
+include_once 'genres_list.features.inc';
