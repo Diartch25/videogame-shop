@@ -1,0 +1,157 @@
+.nav-main {
+    @include span-columns(12);
+    border-top: 2px solid;
+    @include border-lv($subtitle, -60);
+    background: $menu-color;
+    height: auto;
+    margin-top: 20px;
+    ul {
+        overflow: hidden;
+        transition: 0.4s;
+        padding-left: 0;
+        width: 100%;
+        margin-bottom: 0;
+        @media (min-width : 320px) {
+            height: 0;
+        }
+        @media (min-width : 900px) {
+            height: auto;
+        }
+    }
+    li {
+        height: 50px;
+        list-style: none;
+        text-align: center;
+        padding: 10px 0;
+        @media (min-width : 320px){
+            width: 100%;
+            display: block;
+        }
+        @media (min-width : 900px) {
+            width: 20%;
+            display: inline-block;
+        }
+        &:hover {
+            @include bground-lv($link, -40);
+        }
+    }
+    li:hover a {
+        color: $text-basic;
+        text-decoration: none;
+    }
+
+    .menu a {
+        @include font-size(20);
+        color: $link;
+        text-align: center;
+    }
+    // Sub navigation style
+    .expanded .menu {
+        background: $menu-color;
+        display: none;
+        height: 102px;
+        padding: 2px 0 19px 0;
+        z-index: 10;
+        @media (min-width : 320px){
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        @media (min-width : 900px) {
+            position: absolute;
+            overflow: hidden;
+            left: 380px;
+            top: 167px;
+            width: 50%;
+            z-index: 1;
+        }
+        li {
+            float: left;
+            width: 25%;
+            padding: 13px 0;
+            @media (min-width : 320px){
+                display: none;
+            }
+            @media (min-width : 900px) {
+                display: inline-block;
+            }
+        }
+        a {
+            @include font-size(15);
+            color: $text-basic;
+            text-decoration: none;
+        }
+    }
+    .expanded:hover .menu {
+        @media (min-width : 320px){
+            display: none;
+        }
+        @media (min-width : 900px) {
+            display: block;
+        }
+    }
+}
+
+.admin-menu .nav-main{
+    .expanded .menu {
+        @media (min-width : 900px) {
+            position: absolute;
+            overflow: hidden;
+            left: 180px;
+            top: 50px;
+            width: 50%;
+            z-index: 1;
+        }
+    }
+}
+
+#block-menu-menu-social-network{
+    @include span-columns(5);
+    @include omega();
+    .menu{
+        float: right;
+        width: 100%;
+    }
+    .leaf a{
+        color: transparent;
+    }
+    li{
+        @include bground-lv($link, -40);
+        display: inline-block;
+        margin: 0 !important;
+        padding: 7px 0;
+        text-align: center;
+        width: 35%;
+        transition: all 0.6s cubic-bezier(0,0.85,0.64,0.96);
+        &:hover{
+            color: $text-basic;
+            transition: all 0.6s cubic-bezier(0,0.85,0.64,0.96);
+        }
+    }
+    .first{
+        background: $facebook;
+        transition: all 0.6s cubic-bezier(0,0.85,0.64,0.96);
+        &:hover{
+            @include bground-lv($facebook, -30);
+            transition: all 0.6s cubic-bezier(0,0.85,0.64,0.96);
+        }
+        a {
+            background: url('../img/fb-icon.png') no-repeat center;
+            background-size: 9px;
+        }
+    }
+    .last {
+        background: $twitter;
+        transition: all 0.6s cubic-bezier(0,0.85,0.64,0.96);
+        &:hover{
+            @include bground-lv($twitter, -30);
+            transition: all 0.6s cubic-bezier(0,0.85,0.64,0.96);
+        }
+        a {
+            background: url('../img/tw-icon.png') no-repeat center;
+            background-size: 23px;
+            transition: all 0.6s cubic-bezier(0,0.85,0.64,0.96);
+        }
+    }
+}

@@ -1,0 +1,56 @@
+//
+// Variables
+//
+
+// Sprite
+$sprite-image: "../images/global-sprite";
+
+//Neat Import
+@import "neat";
+
+// Typography
+// @import url(https://fonts.googleapis.com/css?family=Hind:400,500,600,700,300);
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300,300italic);
+$font: 'Muli', Arial, sans-serif;
+
+// Colors
+$star: #e5a929;
+$wrap-color: #272939;
+$products-container: #252525;
+$menu-color: #252525;
+
+$title: #52C0D3;
+$subtitle: #52C0D3;
+$text-basic: #ededed;
+$link: #e5a929;
+$price: #2dc103;
+
+$facebook: #46629e;
+$twitter: #55acee;
+
+
+
+
+
+//Degradados
+
+// Neat variables
+$max-width: 1200px;
+$grid-colums: 12;
+
+// Breakpoints
+/* $desktop: 1000px;
+$tablet: 700px;
+$mobile-large: 500px; */
+
+$mobile: new-breakpoint(min-width 320px 8);
+$mobile-large: new-breakpoint(min-width 600px 8);
+$tablet: new-breakpoint(min-width 900px 10);
+$desktop: new-breakpoint(min-width 1280px 12);
+$desktop-large: new-breakpoint(min-width 1400px 12);
+
+
+
+
+
+

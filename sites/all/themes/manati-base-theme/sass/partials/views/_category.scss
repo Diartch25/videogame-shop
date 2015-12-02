@@ -1,0 +1,41 @@
+.view-lista-generos{
+    overflow: hidden;
+    padding: 50px 0 100px 0;
+    @include bground-lv($menu-color, 0);
+    .item-list{
+        @include span-columns(12);
+        @include omega();
+        @include shift(2);
+        .views-row{
+            @include bground-lv($subtitle, -80);
+        }
+    }
+}
+
+.view-lista-generos{
+    ul{
+        li{
+            @include span-columns(4);
+            @include omega();
+        }
+    }
+}
+
+
+.view-lista-generos {
+    .taxonomy-term {
+        h2{
+            text-align: center;
+        }
+        a {
+            @include bground-lv($subtitle, -60);
+            color: $text-basic;
+            margin: 0 0 10px 0;
+            padding: 12px 0;
+            display: block;
+            &:hover {
+                @include bground-lv($subtitle, -40);
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.not-front {
+    .main-content {
+        @include outer-container;
+        @include bground-lv($menu-color, 20);
+        overflow: hidden;
+
+    }
+    .main-content .main{
+        h1 {
+            @include span-columns(12);
+            @include shift(1);
+        }
+        .node-game {
+            @include span-columns(12);
+        }
+    }
+}
+
+.field-name-field-mini-billboards{
+    .field-item{
+        display: inline-block;
+        float: left;
+        margin-right: 1%;
+    }
+    img{
+        height: 70px;
+        width: 80px;
+    }
+
+}
+
+.field-name-field-genre, .field-name-field-price, .field-name-field-fivestar, .field-name-body{
+    @include span-columns(4);
+    @include shift(1);
+    @include omega();
+    float: right;
+}
+
+.field-name-field-billboard{
+    @include span-columns(4);
+    @include shift(1);
+    @include omega();
+    float: left;
+}
+.field-name-field-mini-billboards{
+    @include span-columns(4);
+    @include shift(1);
+    @include omega();
+    float: left;
+}
+

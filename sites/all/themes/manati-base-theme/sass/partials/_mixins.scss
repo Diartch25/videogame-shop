@@ -1,0 +1,52 @@
+//
+// Mixins
+//
+
+// font-size mixin
+@mixin font-size($size) {
+  	font-size: $size + px;
+  	font-size: ($size / 10) + rem;
+}
+
+// sprite mixin
+// usage example:
+// @include sprite(red, $x: center, $y: -589px);
+@mixin sprite($color, $x, $y, $image: "$sprite-image") {
+  	background: $color url($image + ".png");
+  	background-image: url($image + ".svg"), none;
+  	background-position: $x $y;
+  	background-repeat: no-repeat;
+}
+
+// color text mixin
+// usage example:
+// @include color-lv(red, $nv: 10);
+// where $nv is a intensity with values: 0, negative or positive numbers
+
+@mixin color-lv($color, $nv) {
+    color: $color + $nv;
+}
+
+// color background mixin
+// usage example:
+// @include bground-lv(red, $nv: 10);
+// where $nv is a intensity with values: 0, negative or positive numbers
+
+@mixin bground-lv($color, $nv) {
+    background: $color + $nv;
+}
+
+// color border mixin
+// usage example:
+// border: x solid;
+// @include border-lv(red, $nv: 10);
+// where $nv is a intensity with values: 0, negative or positive numbers
+// Important: border ever in top line
+
+@mixin border-lv($color, $nv) {
+    border-color: $color + $nv;
+}
+
+
+
+

@@ -1,0 +1,51 @@
+.view-slider{
+    z-index: -1;
+    position: relative;
+    width: 100%;
+    padding-bottom: 65px;
+    @include bground-lv($menu-color, 50);
+    .slides li{
+        padding: 0;
+    }
+    .flexslider{
+        @include bground-lv($menu-color, 10);
+        border: 10px solid;
+        @include border-lv($menu-color, 10);
+        margin: 0;
+    }
+    .views-label{
+        display: none;
+    }
+    .field-content {
+        max-width: $max-width;
+        margin: 0 auto;
+        @media (min-width : 320px) {
+            height: 300px;
+        }
+        @media (min-width : 600px) {
+            height: 320px;
+        }
+        @media (min-width : 900px) {
+            height: 450px;
+        }
+        img{
+            width: 100%;
+            @media (min-width : 320px) {
+                height: 300px;
+            }
+            @media (min-width : 600px) {
+                height: 320px;
+            }
+            @media (min-width : 900px) {
+                height: 450px;
+            }
+        }
+    }
+    .flex-control-nav{
+        bottom: -52px;
+    }
+}
+
+
+
+

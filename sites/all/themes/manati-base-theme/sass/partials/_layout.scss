@@ -1,0 +1,114 @@
+//
+// General layout rules
+//
+
+.main-content {
+    @include outer-container;
+}
+
+section {
+    @include span-columns(12);
+    padding: 45px 0 65px;
+}
+
+.title-section {
+    @include omega();
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(6);
+        margin-left: 0;
+        @include shift(1);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(6);
+        @include omega();
+        @include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(8);
+        @include shift(1);
+        @include omega();
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(12);
+        @include omega();
+        margin-left: 0;
+    }
+    @include media($desktop-large) {
+        @include span-columns(12);
+        @include omega();
+        margin-left: 0;
+    }
+}
+
+/*header {
+    width: 100%;
+    height: auto;
+    background-color: $products-container;
+}*/
+
+/* =============== Section Video =============== */
+.section-video {
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+        @include omega();
+        margin-left: 0;
+        //@include shift(1);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(8);
+        @include omega();
+        margin-left: 0;
+        //@include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(10);
+        @include omega();
+        //@include shift(1);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(12);
+        @include omega();
+        //@include shift(1);
+    }
+}
+
+.video-container {
+    @include omega();
+    margin: 18px 0;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(8 of 10);
+        @include shift(1);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(10 of 12);
+        @include shift(1);
+    }
+    @include media($desktop-large) {
+        @include span-columns(12 of 12);
+        margin-left: 0;
+    }
+}
+
+footer {
+    @include outer-container;
+}

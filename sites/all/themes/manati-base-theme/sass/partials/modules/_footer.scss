@@ -1,0 +1,52 @@
+.footer {
+	@include font-size(14);
+	background-color: #252525;
+	height: 70px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.text-footer {
+	width: 20%;
+	margin: 0;
+	display: inline-block;
+	margin-top: 25px;
+	margin-left: 40px;
+}
+
+
+/* ======== icons =========*/
+.nav-footer {
+	width: auto;
+	display: inline-block;
+	float: right;
+	margin-top: 18px;
+	margin-right: 40px;
+}
+
+.list-social {
+	margin: 0;
+}
+
+.li-item {
+	display: inline-block;
+	margin-left: 4px;
+}
+
+.li-item p {
+	margin: 0;
+	padding: 6px 12px;
+}
+
+.social-net-fb {
+	background-color: $facebook;
+}
+
+.social-net-tw {
+	background-color: $twitter;
+}
+
+.social-net {
+	text-decoration: none;
+	color: white;
+}

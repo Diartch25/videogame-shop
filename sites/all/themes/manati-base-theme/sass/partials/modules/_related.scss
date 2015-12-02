@@ -1,0 +1,149 @@
+header {
+    width: 100%;
+    margin: 0;
+}
+
+.related-products-container {
+    @include omega();
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+        margin-left: 0;
+        //@include shift(1);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(8);
+        margin-left: 0;
+        //@include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(10);
+        //@include shift(1);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(10);
+        @include shift(1);
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        @include span-columns(12);
+        margin-left: 0;
+    }
+}
+
+.related-list {
+    padding-left: 0;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+        //@include shift(1);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(8);
+        //@include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(8);
+        @include shift(2);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(12);
+        margin-left: 0;
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        @include span-columns(12);
+        margin-left: 0;
+    }
+}
+
+.related-list-item {
+    //border: 1px solid white;
+    margin-top: 20px;
+    text-align: center;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+        margin-left: 0;
+        //@include shift(1);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(8);
+        margin-left: 0;
+        //@include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(3);
+        @include omega();
+        //@include shift(1);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(4);
+        @include omega();
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        @include span-columns(4);
+        @include omega();
+    }
+}
+
+.image-product-related {
+    // 8 columns 320px
+    @include media($mobile) {
+        padding: 15px 0;
+        width: 250px;
+        height: 350px;
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        padding: 15px 0;
+        width: 250px;
+        height: 350px;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        padding: 15px 0;
+        width: 160px;
+        height: 240px;
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        padding: 15px 0;
+        width: 160px;
+        height: 240px;
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        padding: 15px 0;
+        width: 160px;
+        height: 240px;
+    }
+}
+
+.name-game-related {
+    @include font-size(18);
+}
+
+.price-related {
+    color: #2dc103;
+    display: block;
+    text-align: center;
+}
+
+.product-price-related {
+    @include font-size(14);
+    color: white;
+    display: block;
+    margin-top: 0;
+    text-align: center;
+}

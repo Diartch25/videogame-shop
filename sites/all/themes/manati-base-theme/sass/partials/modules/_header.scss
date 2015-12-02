@@ -1,0 +1,86 @@
+.header{
+       overflow: hidden;
+}
+
+.header-content {
+    @include outer-container;
+    background: $products-container;
+    .block-block{
+        @include span-columns(12);
+    }
+    h2{
+        @include span-columns(8);
+    }
+}
+
+.header-product-name {
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(6);
+        @include omega();
+        @include shift(1);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(6);
+        @include omega();
+        @include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(8);
+        @include omega();
+        @include shift(1);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(10);
+        @include omega();
+        @include shift(1);
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        @include span-columns(12);
+        @include omega();
+        margin-left: 0;
+    }
+}
+
+.main-title {
+    margin-bottom: 0;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include font-size(18);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include font-size(22);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include font-size(25);
+    }
+}
+
+#block-block-3{
+    @include span-columns(6);
+    @include omega();
+    margin: 30px 5%;
+    h2{
+         @include font-size(30);
+         margin: 0;
+    }
+}
+
+#block-system-main-menu, #block-menu-menu-social-network {
+    h2{
+        display: none;
+    }
+}
+
+#block-block-3 > h2 {
+    display: none;
+}
+
+
+
